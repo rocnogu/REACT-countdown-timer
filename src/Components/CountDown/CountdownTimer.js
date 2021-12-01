@@ -19,17 +19,18 @@ const CountdownTimer = () => {
   function updateRemainingTime(countdown) {
     setRemainingTime(CountdownUtils(countdown));
   }
+  //////
+  const epochTime = new Date(2222, 2, 22, 2, 2, 2, 2);
+
+  const countdownInMS = epochTime.getTime();
   //
   useEffect(() => {
     const intervalId = setInterval(() => {
       updateRemainingTime(countdownInMS);
     }, 1000);
     return () => clearInterval(intervalId);
-  }, []);
-  //////
-  const epochTime = new Date(2222, 2, 22, 2, 2, 2, 2);
+  }, [countdownInMS]);
 
-  const countdownInMS = epochTime.getTime();
   ////////////////////////////////
   return (
     <div>
