@@ -1,18 +1,13 @@
 import { useState, useEffect } from "react";
-//
-import "./CountdownTimer.css";
-//
 import { CountdownUtils } from "./Utils/CountdownUtils";
-
 import Card from "react-bootstrap/Card";
-
+//
 const defaultRemainingTime = {
   seconds: "00",
   minutes: "00",
   hours: "00",
   days: "00",
 };
-
 ////////////////////////////////
 export default function CountdownTimer() {
   //
@@ -21,9 +16,8 @@ export default function CountdownTimer() {
   function updateRemainingTime(countdown) {
     setRemainingTime(CountdownUtils(countdown));
   }
-  //////
+  //
   const epochTime = new Date(2222, 2, 22, 2, 2, 2, 2);
-
   const countdownInMS = epochTime.getTime();
   //
   useEffect(() => {
@@ -32,7 +26,6 @@ export default function CountdownTimer() {
     }, 1000);
     return () => clearInterval(intervalId);
   }, [countdownInMS]);
-
   ////////////////////////////////
   return (
     <div className="countdown">
