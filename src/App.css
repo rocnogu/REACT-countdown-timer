@@ -1,18 +1,18 @@
 .App {
+  text-align: center;
+}
+.countdown {
   background-color: black;
   color: #ffebcd;
   word-wrap: break-word !important;
   font-size: 30px;
 
-  width: 100vw;
-  height: 100vh;
+  width: 97vw;
+  height: 70vh;
   margin: 0 auto !important;
   padding: 0s !important;
 
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.countdown {
-  width: 88%;
 }
