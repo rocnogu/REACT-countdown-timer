@@ -1,15 +1,18 @@
 .App {
   background-color: black;
   color: #ffebcd;
-  word-wrap: break-word;
+  word-wrap: break-word !important;
   font-size: 30px;
 
-  width: 99vw;
-  height: 99vh;
-  margin: 0 !important;
-  padding: 0 !important;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto !important;
+  padding: 0s !important;
 
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.countdown {
+  width: 88%;
 }
